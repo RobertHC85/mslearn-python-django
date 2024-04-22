@@ -16,7 +16,8 @@ class FunctionalTests(unittest.TestCase):
         chromedriver_path = os.environ.get("CHROMEWEBDRIVER")  # Obtener la ruta desde la variable de entorno
         if not chromedriver_path:
             raise ValueError("Variable de entorno CHROMEWEBDRIVER no encontrada.")
-        self.driver = webdriver.Chrome(executable_path=os.path.join(chromedriver_path, 'chromedriver'), options=options)
+        #self.driver = webdriver.Chrome(executable_path=os.path.join(chromedriver_path, 'chromedriver'), options=options)
+        self.driver = webdriver.Chrome(options=options)
 
     """
     The current time taken by the webapp to refresh after deployment is a considerable amount and the selenium tests
